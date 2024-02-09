@@ -303,7 +303,7 @@
 <!-- overlayScrollbars -->
 <script src="{{asset('adminlte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}}"></script>
 <!-- AdminLTE App -->
-<script src="{{asset('adminlte/dist/js/adminlte.js')}}"></script>
+<script src="{{asset('adminlte/dist/js/adminlte.min.js')}}"></script>
 
 
 
