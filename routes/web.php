@@ -43,3 +43,12 @@ Route::group(['prefix' => 'colors'], function (){
    Route::patch('/{color}', [\App\Http\Controllers\Color\UpdateController::class, 'update'])->name('color.update');
    Route::delete('/{color}', [\App\Http\Controllers\Color\DeleteController::class, 'delete'])->name('color.delete');
 });
+Route::group(['prefix' => 'users'], function (){
+    Route::get('/', [\App\Http\Controllers\User\IndexController::class, 'index'])->name('user.index');
+    Route::get('/create', [\App\Http\Controllers\User\CreateController::class, 'create'])->name('user.create');
+    Route::post('/', [\App\Http\Controllers\User\StoreController::class, 'store'])->name('user.store');
+    Route::get('/{user}/edit', [\App\Http\Controllers\User\EditController::class, 'edit'])->name('user.edit');
+    Route::get('/{user}', [\App\Http\Controllers\User\ShowController::class, 'show'])->name('user.show');
+    Route::patch('/{user}', [\App\Http\Controllers\User\UpdateController::class, 'update'])->name('user.update');
+    Route::delete('/{user}', [\App\Http\Controllers\User\DeleteController::class, 'delete'])->name('user.delete');
+});
