@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Tag;
+namespace App\Http\Controllers\Color;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Tag\StoreRequest;
-use App\Models\Tag;
+use App\Http\Requests\Color\StoreRequest;
+use App\Models\Color;
 use Illuminate\Http\Request;
 
 class StoreController extends Controller
@@ -12,8 +12,8 @@ class StoreController extends Controller
     public function store(StoreRequest $request)
     {
         $data = $request->validated();
-        Tag::firstOrCreate($data);
+        Color::firstOrCreate($data);
 
-        return redirect()->route('tag.index');
+        return redirect()->route('color.index');
     }
 }

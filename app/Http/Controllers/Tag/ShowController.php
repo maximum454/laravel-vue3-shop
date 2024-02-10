@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class ShowController extends Controller
 {
-    public function Show(Tag $tag){
+    public function show(Tag $tag){
         return view('tag.show', compact('tag'));
     }
 }
