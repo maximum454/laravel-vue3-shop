@@ -19,11 +19,11 @@ class StoreRequest extends FormRequest
      *
      * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
      */
-    public function rules(): array
+    public function rules()
     {
         return [
             'name' => 'required|string',
-            'email' => 'required|string|unique:users, email',
+            'email' => 'required|string|unique:users,email',
             'password' => 'required|string|confirmed',
             'surname' => 'nullable|string',
             'patronymic' => 'nullable|string',

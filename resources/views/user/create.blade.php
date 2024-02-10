@@ -47,7 +47,7 @@
                         </div>
                         <div class="form-group">
                             <label for="patronymic">Отчество</label>
-                            <input type="text" class="form-control" id="patronymic" name="patronymic" placeholder="Фамилия" value="{{old('patronymic')}}">
+                            <input type="text" class="form-control" id="patronymic" name="patronymic" placeholder="Отчество" value="{{old('patronymic')}}">
                         </div>
                         <div class="form-group">
                             <label for="age">Возраст</label>

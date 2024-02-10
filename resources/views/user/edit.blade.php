@@ -28,33 +28,33 @@
                     <div class="card-body">
                         <div class="form-group">
                             <label for="name">Имя</label>
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Например: Ваня" value="{{ $user->name ?? old('name')}}">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Например: Ваня" value="{{ $user->name ?? old('name') }}">
                         </div>
                         <div class="form-group">
                             <label for="surname">Фамилия</label>
-                            <input type="text" class="form-control" id="surname" name="surname" placeholder="Фамилия" value="{{ $user->surname ?? old('surname')}}">
+                            <input type="text" class="form-control" id="surname" name="surname" placeholder="Фамилия" value="{{ $user->surname ?? old('surname') }}">
                         </div>
                         <div class="form-group">
                             <label for="patronymic">Отчество</label>
-                            <input type="text" class="form-control" id="patronymic" name="patronymic" placeholder="Фамилия" value="{{ $user->patronymic ?? old('patronymic')}}">
+                            <input type="text" class="form-control" id="patronymic" name="patronymic" placeholder="Отчество" value="{{ $user->patronymic ?? old('patronymic') }}">
                         </div>
                         <div class="form-group">
                             <label for="age">Возраст</label>
-                            <input type="number" class="form-control" id="age" name="age" placeholder="Возраст" value="{{ $user->age ?? old('age')}}">
+                            <input type="number" class="form-control" id="age" name="age" placeholder="Возраст" value="{{ $user->age ?? old('age') }}">
                         </div>
                         <div class="form-group">
                             <label for="address">Адрес</label>
-                            <input type="text" class="form-control" id="address" name="address" placeholder="Адрес" value="{{ $user->address ?? old('address')}}">
+                            <input type="text" class="form-control" id="address" name="address" placeholder="Адрес" value="{{ $user->address ?? old('address') }}">
                         </div>
                         <div class="form-group">
                             <select name="gender" class="custom-select form-control" id="selectGender">
                                 <option disabled selected>Пол</option>
-                                <option {{ $user->gender ||  old('gender') == 1 ? 'selected': '' }} value="1">Мужской</option>
-                                <option {{ $user->gender ||  old('gender') == 2 ? 'selected': '' }} value="2">Женский</option>
+                                <option {{ $user->gender == 1 || old('gender') == 1 ? 'selected': '' }} value="1">Мужской</option>
+                                <option {{ $user->gender == 2 || old('gender') == 2 ? 'selected': '' }} value="2">Женский</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary">Добавить</button>
+                            <button type="submit" class="btn btn-primary">Изменить</button>
                         </div>
                     </div>
                 </form>

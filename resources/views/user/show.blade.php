@@ -36,28 +36,38 @@
 
                         <div class="card-body table-responsive p-0">
                             <table class="table table-hover text-nowrap">
-                                <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Имя</th>
-                                    <th>Фамилия</th>
-                                    <th>Отчество</th>
-                                    <th>Почта</th>
-                                    <th>Возраст</th>
-                                    <th>Пол</th>
-                                    <th>Адрес</th>
-                                </tr>
-                                </thead>
                                 <tbody>
                                     <tr>
+                                        <th>#</th>
                                         <td>{{ $user->id }}</td>
-                                        <td>>{{ $user->name }}</a></td>
-                                        <td>>{{ $user->surname }}</td>
-                                        <td>>{{ $user->patronymic }}</td>
-                                        <td>>{{ $user->email }}</td>
-                                        <td>>{{ $user->age }}</td>
-                                        <td>>{{ $user->getName }}</td>
-                                        <td>>{{ $user->address }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Имя</th>
+                                        <td>{{ $user->name }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Фамилия</th>
+                                        <td>{{ $user->surname }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Отчество</th>
+                                        <td>{{ $user->patronymic }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Почта</th>
+                                        <td>{{ $user->email }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Возраст</th>
+                                        <td>{{ $user->age }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Пол</th>
+                                        <td>{{ $user->genderName }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Адрес</th>
+                                        <td>{{ $user->address }}</td>
                                     </tr>
                                 </tbody>
                             </table>

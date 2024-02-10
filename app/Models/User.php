@@ -22,7 +22,7 @@ class User extends Authenticatable
     {
         return [
             self::GENDER_MALE => 'Мужской',
-            self::GENDER_FEMALE => 'Женский'
+            self::GENDER_FEMALE => 'Женский',
         ];
     }
 
@@ -40,6 +40,11 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'surname',
+        'patronymic',
+        'age',
+        'gender',
+        'address',
     ];
 
     /**

@@ -53,16 +53,16 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($users as $item)
+                                @foreach($users as $user)
                                 <tr>
-                                    <td>{{ $item->id }}</td>
-                                    <td><a href="{{ route('user.show', $item->id) }}">{{ $item->name }}</a></td>
-                                    <td>>{{ $item->surname }}</td>
-                                    <td>>{{ $item->patronymic }}</td>
-                                    <td>>{{ $item->email }}</td>
-                                    <td>>{{ $item->age }}</td>
-                                    <td>>{{ $item->getName }}</td>
-                                    <td>>{{ $item->address }}</td>
+                                    <td>{{ $user->id }}</td>
+                                    <td><a href="{{ route('user.show', $user->id) }}">{{ $user->name }}</a></td>
+                                    <td>{{ $user->surname }}</td>
+                                    <td>{{ $user->patronymic }}</td>
+                                    <td>{{ $user->email }}</td>
+                                    <td>{{ $user->age }}</td>
+                                    <td>{{ $user->genderName }}</td>
+                                    <td>{{ $user->address }}</td>
                                 </tr>
                                 @endforeach
                                 </tbody>
