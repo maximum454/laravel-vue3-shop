@@ -24,3 +24,13 @@ Route::group(['prefix' => 'categories'], function (){
     Route::patch('/{category}', [\App\Http\Controllers\Category\UpdateController::class, 'update'])->name('category.update');
     Route::delete('/{category}', [\App\Http\Controllers\Category\DeleteController::class, 'delete'])->name('category.delete');
 });
+
+Route::group(['prefix' => 'tags'], function (){
+    Route::get('/', [\App\Http\Controllers\Tag\IndexController::class, 'index'])->name('tag.index');
+    Route::get('/create', [\App\Http\Controllers\Tag\CreateController::class, 'create'])->name('tag.create');
+    Route::post('/', [\App\Http\Controllers\Tag\StoreController::class, 'store'])->name('tag.store');
+    Route::get('/{tag}/edit', [\App\Http\Controllers\Tag\EditController::class, 'edit'])->name('tag.edit');
+    Route::get('/{tag}', [\App\Http\Controllers\Tag\ShowController::class, 'show'])->name('tag.show');
+    Route::patch('/{tag}', [\App\Http\Controllers\Tag\UpdateController::class, 'update'])->name('tag.update');
+    Route::delete('/{tag}', [\App\Http\Controllers\Tag\DeleteController::class, 'delete'])->name('tag.delete');
+});
